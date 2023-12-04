@@ -23,7 +23,7 @@ async function fetchStats(eventId) {
     repoUrl,
     mode,
   } = config(eventId);
-  const phoneNumbers = visibleNumbers
+  const phoneNumbers = (''+visibleNumbers)
     .split(',') 
     .map(n => n.trim())
     .slice(0, 2);
