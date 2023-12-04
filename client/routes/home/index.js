@@ -41,8 +41,8 @@ export default class Home extends Component {
   render() {
     return (
       <div class={style.home}>
-        <h2>Twilio Smoothies</h2>
-        <p>Welcome to Twilio Smoothies. Please pick your event:</p>
+        <h2>Momentum App</h2>
+        <p>Welcome to Momentum Coffee App. Please pick your event:</p>
         <div class={style.container}>{this.renderEvents()}</div>
       </div>
     );

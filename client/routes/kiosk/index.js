@@ -41,11 +41,11 @@ export default class Kiosk extends Component {
         <p class={style.hr}>Skip the Queue!</p>
         <div class={style.centerContent}>
           <p>{kiosk.tagLine}</p>
-          <p>Send your order via WhatsApp to:</p>
+          <p>Send your order via SMS to:</p>
           <div class={style.phoneNumbers}>
             {this.state.kioskInfo.phoneNumbers.slice(0, 4).map(num => (
               <p>
-                {num.emoji} {num.phoneNumber}
+                <a href={"sms:" + num.phoneNumber + "?body=Name%3A%20%3Cinsert%20name%3E%0AOrder%3A%20I%20would%20like%20a%20coffee%20with%20oat%20milk"}>{num.emoji} {num.phoneNumber}</a>
               </p>
             ))}
           </div>
@@ -56,9 +56,6 @@ export default class Kiosk extends Component {
           <p class={style.menuDetails}>{this.state.kioskInfo.menuDetails}</p>
         </div>
         <p class={style.hr}>Enjoy</p>
-        <p>
-          <TwilioLogo />
-        </p>
       </div>
     );
   }
