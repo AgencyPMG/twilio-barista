@@ -47,7 +47,7 @@ function getOrderCreatedMessage(product, orderNumber, forEvent) {
   const { repoUrl, mode } = config(forEvent);
   const dataPolicy = `\n\nWe only use your phone number to notify you about our ${mode.toLowerCase()} service and redact all the messages & phone numbers afterwards.`;
   return {
-    body: `Thanks for ordering a *${product}* from the Twilio powered ${mode.toLowerCase()} bar. Your order number is *#${orderNumber}*. We'll text you back when it's ready. ${dataPolicy} In the meantime check out this repo ${repoUrl} if you want to see how we built this app. `,
+    body: `Thanks for ordering a *${product}* from the bar. Your order number is *#${orderNumber}*. We'll text you back when it's ready.`,
   }
 }
 
@@ -114,7 +114,7 @@ function getCancelOrderMessage(product, orderNumber) {
 
 function getOopsMessage(error) {
   return {
-    body: `Oops something went wrong! Talk to someone from Twilio and see if they can help you.`
+    body: `Oops something went wrong! Talk to someone from Momentum Shared Services and see if they can help you.`
   }
 }
 
