@@ -36,7 +36,7 @@ const BARISTA = {
   },
   kiosk: {
     title: 'Thirsty? Coffee?',
-    tagLine: 'Make your coffee order ⚡️ asynchronous ⚡️',
+    tagLine: '',
   },
 };
 

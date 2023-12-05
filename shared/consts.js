@@ -149,7 +149,7 @@ const DEFAULT_EVENT_CONFIGURATION = {
   mode: "barista",
   offlineMessage: "We are sorry but there are currently no beverages.",
   menuDetails: "",
-  orderPickupLocation: "the Twilio stand",
+  orderPickupLocation: "the PMG coffee bar",
   repoUrl: "https://twil.io/twilio-barista",
   expectedOrders: 300,
   maxOrdersPerCustomer: 2,

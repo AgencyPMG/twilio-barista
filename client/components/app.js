@@ -21,7 +21,7 @@ export default class App extends Component {
     this.syncClient.on('disconnected', () => {
       this.setState({ isAdmin: false, isLoggedIn: false });
     });
-    const isDashboard = location.pathname.endsWith('/dashboard');
+    const isDashboard = location.pathname.endsWith('/dashboard') || location.pathname.endsWith('/kiosk');
     this.syncClient
       .init(isDashboard)
       .then(() => {
