@@ -55,7 +55,30 @@ export default class Kiosk extends Component {
           {this.state.kioskInfo.menuItems.map((product) => <p class={style.menuItems}>{product}</p>)}
           <p class={style.menuDetails}>{this.state.kioskInfo.menuDetails}</p>
         </div>
+        <p class={style.hr}>Syrups</p>
+        <div>
+          <p class={style.menuItems}>Mocha</p>
+          <p class={style.menuItems}>Simple (Sweet)</p>
+          <p class={style.menuItems}>Vanilla</p >
+          <p class={style.menuItems}>Lavender</p >
+          <p class={style.menuItems}>Vanilla (Sugar Free)</p >
+          <p class={style.menuItems}>Lavender</p >
+        </div>
+        <p class={style.hr}>Milk Options</p>
+        <div>
+            <p class={style.menuItems}>Whole Milk</p>
+            <p class={style.menuItems}>Oat Milk</p>
+            <p class={style.menuItems}>Almond Milk</p>
+            <p class={style.menuItems}>Coconut Milk</p>     
+        </div>
         <p class={style.hr}>Enjoy</p>
+        <div>
+            {this.state.kioskInfo.phoneNumbers.slice(0, 4).map(num => (
+              <p>
+                <a class="mdl-button mdl-js-ripple-effect mdl-js-button mdl-button--primary mdl-button--raised" href={"sms:" + num.phoneNumber + "?body=Name%3A%20%3Cinsert%20name%3E%0AOrder%3A%20I%20would%20like%20a%20coffee%20with%20oat%20milk"}>Click here to order</a>
+              </p>
+            ))}
+        </div>
       </div>
     );
   }
